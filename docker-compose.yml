@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  dokidoki_hack:
+    build: .
+    container_name: dokidoki
+    volumes:
+      - ./decompile_data:/dokidoki/decompile_data
+      - ./rpas:/dokidoki/rpas
+      - ./rpatool:/dokidoki/rpatool
+      - ./unrpyc:/dokidoki/unrpyc
+    command: /bin/bash
+    tty: true
+    stdin_open: true
